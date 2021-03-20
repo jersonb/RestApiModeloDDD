@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Respostas do teste";
+}
+<h6>HTML, CSS e Bootstrap </h6>
+<br />
+<div style="margin-bottom: 20px;">
+    <p>1. Escreva um HTML login form com o id "login" que contenha:</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        < form id="login" >
+        <br />< div asp-validation-summary="ModelOnly" class="text-danger" >< /div >
+        <br />< div class="form-group" >
+        <br />< label asp-for="email" class="control-label" >< /label >
+        <br />< input asp-for="email" class="form-control" / >
+        <br />< span asp-validation-for="email" class="text-danger" >< /span >
+        <br />< /div >
+        <br />< div class="form-group" >
+        <br />< label asp-for="password" class="control-label" >< /label >
+        <br />< input asp-for="password" class="form-control" / >
+        <br />< span asp-validation-for="password" class="text-danger" >< /span >
+        <br />< /div >
+        <br />< div class="form-group" >
+        <br />< input type="submit" value="Enviar" class="btn btn-success" / >
+        <br />< /div >
+        <br />< /form >
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>2. O seguinte elemento é baseado no Bootstrap:</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        [     ]< a href="#" class="btnbtn-info" >Info< /a>
+        <br />[     ]< button type="button" class="btnbtn-blue" >Info< /button>
+        <br />[     ]< button type="button" class="btn blue" >Info< /button>
+        <br /><strong>[   x  ]< button type="button" class="btn btn-info" >Info< /button></strong>
+        <br />[     ]< button type="button" class="blue button" >Info< /button>
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>3. O que significa HTML?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        [     ]Hyperlinks andText Markup Language
+        <br />[     ]Home Tool Markup Language
+        <br /><strong>[  x   ]HyperText Markup Language</strong>
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>4. Escolha a tag HTML que representa o maior título.</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        [     ]< heading >
+        <br /><strong>[  x   ]< h1 ></strong>
+        <br />[     ]< h6 >
+        <br />[     ]< head >
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>5. Qual o melhor caminho para adicionar um cor de fundo em HTML?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        <strong>[   x  ]< body style ="background-color:yellow;" ></strong>
+        <br />[     ]< background >yellow< /background >
+        <br />[     ]< body background="yellow" >
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>6. Qual o HTML correto para inserir uma imagem?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        [     ]< imgsrc="image.gif" alt="MyImage" >
+        <br />[     ]< image src="image.gif" alt="MyImage" >
+        <br />[     ]< img alt="MyImage" >image.gif< /img>
+        <br />[     ]< img href="image.gif" alt="MyImage" >
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>7. Em um documento HTML, qual o local correto para referenciar um CSS externo?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        [     ]No topo do documento
+        <br />[     ]No fim do documento
+        <br />[     ]Na seção< body >
+        <br /><strong>[  x   ]Na seção< head ></strong>
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>8. Como adicionar uma cor de fundo em todos elementos < h1 > usando CSS?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        [     ]h1.all {background-color:#FFFFFF;}
+        <br />[     ]all.h1 {background-color:#FFFFFF;}
+        <br /><strong>[  x   ]h1 {background-color:#FFFFFF;}</strong>
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>
+        Como exibir uma borda de acordo com os dados abaixo:
+    </p>
+    <p>Borda superior = 10 pixels
+    <br />Borda inferior = 5 pixels
+    <br />Borda esquerda = 20 pixels
+    <br />Borda direita = 1 pixel</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        [     ]border-width:5px 20px 10px 1px;
+        <br /><strong>[  x   ]border-width:10px 5px 20px 1px;</strong>
+        <br />[     ]border-width:10px 1px 5px 20px;
+        <br />[     ]border-width:10px 20px 5px 1px;
+    </div>
+</div>

@@ -1,0 +1,131 @@
+﻿@{
+    ViewData["Title"] = "Respostas do teste";
+}
+<h6>SQL </h6>
+<br />
+<div style="margin-bottom: 20px;">
+    <p>1. Uma tabela contendo o registro “year” tem dados incorretos nos registros com ids entre 20 e 100.Selecione todas as consultas abaixo que, para os registros defeituosos, definir o ano de 2015.</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+              [     ]UPDATE enrollments SET year = 2015 WHERE id IN (20, 100);
+        <br />[     ]UPDATE enrollments SET year = 2015 WHERE id >= 20 AND id <= 100;
+        <br />[     ]UPDATE enrollments SET year = 2015 WHERE id BETWEEN 20 AND 100;
+        <br />[     ]UPDATE enrollments SET year = 2015 WHERE id >= 20 OR id <= 100;
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>2. Selecione todas as consultas que retornam número de estudantes cujo primeiro nome é John</p>
+    <img src="~/../Images/table_student.png" class="img-fluid" alt="200px">
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+              [     ]SELECT COUNT(*) FROM student WHERE firstName = 'John';
+        <br />[     ]SELECT COUNT(*) FROM student GROUP BY firstName HAVING firstName = 'John';
+        <br />[     ]SELECT COUNT(firstName = 'John') FROM student;
+        <br />[     ]SELECT COUNT(*) FROM student HAVING firstName = 'John';
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>3. Qual a declaração correta para inserir um novo dado em uma base?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+              [     ]INSERT NEW
+        <br />[     ]ADD RECORD
+        <br />[     ]ADD NEW
+        <br /><strong>[  x   ]INSERT INTO</strong>
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>4. Com SQL, como selecionar uma coluna chamada “FirstName” de uma tabela chamada “Persons”?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        [     ]SELECT Persons.FirstName
+        <br />[     ]EXTRACT FirstName FROM Persons
+        <br /><strong>[  x   ]SELECT FirstName FROM Persons</strong>
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>5. Com SQL, como selecionar todos os registros de uma tabela chamada “Persons”, onde o valor da coluna “FirstName” começa com “a”?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        <strong>[ x    ]SELECT * FROM Persons WHERE FirstName LIKE 'a%'</strong>
+        <br />[     ]SELECT * FROM Persons WHERE FirstName='a'
+        <br />[     ]SELECT * FROM Persons WHERE FirstName='%a%'
+        <br />[     ]SELECT * FROM Persons WHERE FirstName LIKE '%a'
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>6. Como você pode alterar os valores da coluna LastName “Hansen” para “Nilsen” na tabela “Persons”?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+              [     ]MODIFY Persons SET LastName='Hansen' INTO LastName='Nilsen
+        <br /><strong>[    x ]UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen'</strong>
+        <br />[     ]UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen'
+        <br />[     ]MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen'
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>7.Com SQL, como você pode deletar os registros onde os valores da coluna FirstName são iguais a “Peter” na tabela “Persons”?</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+        [     ]DELETE ROW FirstName='Peter' FROM Persons
+        <br /><strong>[   x  ]DELETE FROM Persons WHERE FirstName = 'Peter'</strong>
+        <br />[     ]DELETE FirstName='Peter' FROM Persons
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>8. Para os exercícios abaixo, considere o diagrama do bd abaixo</p>
+    <img src="~/Images/FastEscova/model.jpg" style="width: auto; height: auto;" />
+</div>
+<div style="margin-bottom: 20px;">
+    <p>a)	Selecionar título, autor e data de lançamento dos livros em ordem de titulo</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+      
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>b)	Selecionar os livros lançados em 2011 ou 2012</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>c) Selecionar os livros que o título contenha a palavra "Redes"</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>d)	Selecionar título, nome do assunto e nº cópias dos livros</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>e)	Selecionar título e autor dos livros que o nome do assunto seja "Redes"</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>f)	Selecionar nome do assunto e nº de livros, agrupados por nome do assunto</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>g)	Alterar o nº de cópias, aumentando 2 unidades, dos livros com nº de cópias inferior a 10</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>h)	Selecionar título do livro, nome do aluno e data de retirada dos empréstimos</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>i)	Somar os valores das multas dos empréstimos dos livros retirados em 2013</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+
+    </div>
+</div>
+<div style="margin-bottom: 20px;">
+    <p>j)	Inserir um novo aluno (via comando SQL)</p>
+    <div class="form-control" style="width: 600px; height: auto; background: #e9ecef;">
+
+    </div>
+</div>
