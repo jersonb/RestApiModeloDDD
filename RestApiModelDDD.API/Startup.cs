@@ -24,9 +24,9 @@ namespace RestApiModelDDD.API
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = Configuration["SqlConnection:SqlConnectionString"];
-            services.AddDbContext<SqlContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<SqlContext>(options => options.UseSqlite(connection));
             services.AddControllers();
-            services.AddSwaggerGen(c => 
+            services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
@@ -40,7 +40,9 @@ namespace RestApiModelDDD.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SqlContext context)
         {
-            if (env.IsDevelopment())
+            context.Database.Migrate();
+
+            if(env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
@@ -50,8 +52,7 @@ namespace RestApiModelDDD.API
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API");
             });
-            
-            context.Database.Migrate();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
