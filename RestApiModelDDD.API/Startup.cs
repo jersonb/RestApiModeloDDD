@@ -24,7 +24,7 @@ namespace RestApiModelDDD.API
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = Configuration["SqlConnection:SqlConnectionString"];
-            services.AddDbContext<SqlContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<SqlContext>(options => options.UseSqlite(connection));
             services.AddControllers();
             services.AddSwaggerGen(c => 
             {

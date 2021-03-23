@@ -28,7 +28,7 @@ namespace RestApiModeloDDD.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = Configuration["SqlConnection:SqlConnectionString"];
-            services.AddDbContext<SqlContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<SqlContext>(options => options.UseSqlite(connection));
             services.AddControllersWithViews();
         }
         public void ConfigureContainer(ContainerBuilder builder)
