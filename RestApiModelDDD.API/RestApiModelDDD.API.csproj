@@ -17,6 +17,8 @@
   <ItemGroup>
     <ProjectReference Include="..\RestApiModeloDDD.Infra\RestApiModeloDDD.Infra.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
 
 </Project>
